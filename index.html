@@ -581,6 +581,56 @@
             color: var(--light-primary);
         }
 
+        /* ===== NEW CONTACT FORM STYLES ===== */
+        .contact-form-container {
+            background: var(--card);
+            border-radius: 15px;
+            padding: 50px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 240, 255, 0.1);
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            background: var(--card);
+            border: 1px solid rgba(0, 240, 255, 0.1);
+            color: var(--text);
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border-radius: 50px;
+        }
+
+        .contact-form textarea {
+            border-radius: 20px;
+        }
+
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            box-shadow: 0 0 0 0.25rem rgba(0, 240, 255, 0.25);
+            border-color: var(--primary);
+        }
+
+        .contact-form button {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #000;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 240, 255, 0.3);
+        }
+
+        .contact-form button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 240, 255, 0.5);
+        }
+
         /* ===== RESPONSIVE STYLES ===== */
         @media (max-width: 1200px) {
             .name-main {
@@ -718,7 +768,7 @@
                     </div>
                     <div class="hero-buttons">
                         <a href="#contact" class="btn btn-hero">Contact Me</a>
-                        <a href="#" class="btn btn-hero btn-outline-hero">Download CV</a>
+                        <a href="https://drive.google.com/file/d/1kYm6mlTSc0_-c64SXpm07VjRmLraDhwF/view?usp=sharing" target="_blank" class="btn btn-hero btn-outline-hero">Download CV</a>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -841,12 +891,20 @@
                                 <h6>Nessus</h6>
                             </div>
                             <div class="tool-item">
-                                <i class="fab fa-python tool-icon"></i>
-                                <h6>Python</h6>
+                                <i class="fab fa-java tool-icon"></i>
+                                <h6>Java</h6>
                             </div>
                             <div class="tool-item">
-                                <i class="fas fa-code tool-icon"></i>
-                                <h6>C</h6>
+                                <i class="fas fa-search tool-icon"></i>
+                                <h6>Nmap</h6>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fas fa-terminal tool-icon"></i>
+                                <h6>Sliver</h6>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fas fa-cube tool-icon"></i>
+                                <h6>Metasploit</h6>
                             </div>
                         </div>
                     </div>
@@ -867,7 +925,7 @@
                             <h4>Phish Guard</h4>
                             <p class="text-muted">Phishing Detection Telegram Bot</p>
                             <div class="mt-2 mb-3">
-                                <span class="project-tag">Python</span>
+                                <span class="project-tag">Java</span>
                                 <span class="project-tag">Telegram API</span>
                                 <span class="project-tag">Security</span>
                             </div>
@@ -884,7 +942,7 @@
                             <h4>File Integrity Checker</h4>
                             <p class="text-muted">For Medical Records</p>
                             <div class="mt-2 mb-3">
-                                <span class="project-tag">Python</span>
+                                <span class="project-tag">Java</span>
                                 <span class="project-tag">Hashing</span>
                                 <span class="project-tag">Security</span>
                             </div>
@@ -902,58 +960,68 @@
     <section class="section" id="contact">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
+            <div class="contact-form-container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h5>Email</h5>
+                                    <p>Jothikakrishnan39@gmail.com</p>
+                                </div>
                             </div>
-                            <div>
-                                <h5>Email</h5>
-                                <p>Jothikakrishnan39@gmail.com</p>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h5>Phone</h5>
+                                    <p>+91 9566016940</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h5>Location</h5>
+                                    <p>Chennai, India</p>
+                                </div>
                             </div>
-                            <div>
-                                <h5>Phone</h5>
-                                <p>+91 9566016940</p>
+                            <div class="social-links mt-4">
+                                <a href="#" class="me-3"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                                <a href="#" class="me-3"><i class="fab fa-github fa-lg"></i></a>
+                                <a href="#" class="me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
                             </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h5>Location</h5>
-                                <p>Chennai, India</p>
-                            </div>
-                        </div>
-                        <div class="social-links mt-4">
-                            <a href="#" class="me-3"><i class="fab fa-linkedin-in fa-lg"></i></a>
-                            <a href="#" class="me-3"><i class="fab fa-github fa-lg"></i></a>
-                            <a href="#" class="me-3"><i class="fab fa-twitter fa-lg"></i></a>
-                            <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-7">
-                    <form class="contact-form">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Your Name" required>
+                    <div class="col-lg-7">
+                        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                            <input type="hidden" name="access_key" value="27504199-9085-43d7-8b3e-1fe81b569aa5" />
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" name="name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email" name="email" required>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <input type="email" class="form-control" placeholder="Your Email" required>
-                            </div>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Subject">
-                        <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                        <button type="submit" class="btn btn-hero">Send Message</button>
-                    </form>
+                            <select class="form-control" name="interest" required>
+                                <option value="" disabled selected>Select your interest</option>
+                                <option value="Network Security">Network Security</option>
+                                <option value="Ethical Hacking">Ethical Hacking</option>
+                                <option value="Penetration Testing">Penetration Testing</option>
+                                <option value="Vulnerability Assessment">Vulnerability Assessment</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <textarea class="form-control" rows="5" placeholder="Your Message" name="message" required></textarea>
+                            <button type="submit" class="btn btn-hero w-100">Send Message <i class="fas fa-arrow-right ms-2"></i></button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
